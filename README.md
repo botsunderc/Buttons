@@ -75,3 +75,21 @@ class Button(discord.ui.View):
 ```
 
 <img src="/Images/four.png">
+
+### Disabling Buttons 
+
+To disable a single button, you may do this: 
+```python
+class Button(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.primary, row=0)
+    async def button_callback1(self, interaction: discord.Interaction, button: discord.ui.Button):
+        button.label = "Button"
+        button.style = discord.ButtonStyle.gray
+        button.disabled = True
+        await interaction.response.edit_message(view=self)
+        await interaction.followup.send("hi")
+```
+<img src="/Images/1dis.png">
