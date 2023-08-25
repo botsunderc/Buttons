@@ -32,6 +32,5 @@ async def buttons(ctx):
 ```
 Naturally, the button will fail as it leads to nothing. 
 
-<img src="/Images/button1.png>
-
-<img src="/Images/failed.png>
+<img src="/Images/button1.png">
+<img src="/Images/failed.png">
