@@ -48,6 +48,11 @@ There are multiple styles of buttons available, as you can see in Pycord's docum
 
 <img src="/Images/pycord.png">
 
+Primary - Blue 
+Secondary - Grey
+Success - Green 
+Danger - Red
+
 ```python
 class Button(discord.ui.View):
 
