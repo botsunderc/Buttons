@@ -34,3 +34,12 @@ Naturally, the button will fail as it leads to nothing.
 
 <img src="/Images/button1.png">
 <img src="/Images/failed.png">
+
+Now, let's make it respond when a user presses the button. 
+```python
+class Button(discord.ui.View):
+    @discord.ui.button(label="Button", row=0)
+    async def button_callback1(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("hi")
+```
+<img src="/Images/response.png">
