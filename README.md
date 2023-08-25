@@ -95,3 +95,52 @@ class Button(discord.ui.View):
 This is what happens when I click on the first button.
 
 <img src="/Images/1dis.png">
+
+
+This is what you can do to disable all the buttons after pressing any of them: 
+
+```python
+class Button(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.primary, row=0)
+    async def button_callback11(self, interaction: discord.Interaction, button: discord.ui.Button):
+        button.label = "Button"
+        for item in self.children:
+            button.style = discord.ButtonStyle.gray
+            item.disabled = True
+        await interaction.response.edit_message(view=self)
+        await interaction.followup.send("hi")
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.secondary, row=0)
+    async def button_callback2(self, interaction: discord.Interaction, button: discord.ui.Button):
+        button.label = "Button"
+        for item in self.children:
+            button.style = discord.ButtonStyle.gray
+            item.disabled = True
+        await interaction.response.edit_message(view=self)
+        await interaction.response.send_message("hi")
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.success, row=0)
+    async def button_callback3(self, interaction: discord.Interaction, button: discord.ui.Button):
+        button.label = "Button"
+        for item in self.children:
+            button.style = discord.ButtonStyle.gray
+            item.disabled = True
+        await interaction.response.edit_message(view=self)
+        await interaction.response.send_message("hi")
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.danger, row=0)
+    async def button_callback4(self, interaction: discord.Interaction, button: discord.ui.Button):
+        button.label = "Button"
+        for item in self.children:
+            button.style = discord.ButtonStyle.gray
+            item.disabled = True
+        await interaction.response.edit_message(view=self)
+        await interaction.response.send_message("hi")
+```
+
+Now every button is disabled. 
+
+<img src="/Images/4dis.png">
