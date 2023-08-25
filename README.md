@@ -1,8 +1,8 @@
-# Persistent Buttons
+# Buttons
 
 ### Contents
 - Buttons
-- Persistence
+- Disabling Buttons
 
 #### Packages used
 - Discord.py
@@ -43,3 +43,7 @@ class Button(discord.ui.View):
         await interaction.response.send_message("hi")
 ```
 <img src="/Images/response.png">
+
+There are multiple styles of buttons available, as you can see in Pycord's documentations: https://guide.pycord.dev/interactions/ui-components/buttons
+
+<img src="/Images/pycord.png">
