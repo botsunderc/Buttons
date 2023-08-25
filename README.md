@@ -47,3 +47,25 @@ class Button(discord.ui.View):
 There are multiple styles of buttons available, as you can see in Pycord's documentations: https://guide.pycord.dev/interactions/ui-components/buttons
 
 <img src="/Images/pycord.png">
+
+```python
+class Button(discord.ui.View):
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.primary, row=0)
+    async def button_callback1(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("hi")
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.secondary, row=0)
+    async def button_callback2(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("hi")
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.success, row=0)
+    async def button_callback3(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("hi")
+
+    @discord.ui.button(label="Button", style=discord.ButtonStyle.danger, row=0)
+    async def button_callback4(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("hi")
+```
+
+<img src="/Images/four.png">
