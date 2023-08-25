@@ -30,3 +30,6 @@ class Button(discord.ui.View):
 async def buttons(ctx):
     await ctx.send(view=Button())
 ```
+Naturally, the button will fail as it leads to nothing. 
+<img src="/Images/button1.png>
+<img src="/Images/failed.png>
