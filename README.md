@@ -8,9 +8,9 @@
 - Discord.py
 - Asynchronous I/O
 
-```
+```python
 import json
-import discord
+import discordpyt
 from discord.ext import commands 
 from discord import ui 
 from discord.ui import View
