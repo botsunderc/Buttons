@@ -108,7 +108,6 @@ class Button(discord.ui.View):
     async def button_callback11(self, interaction: discord.Interaction, button: discord.ui.Button):
         button.label = "Button"
         for item in self.children:
-            button.style = discord.ButtonStyle.gray
             item.disabled = True
         await interaction.response.edit_message(view=self)
         await interaction.followup.send("hi")
@@ -117,30 +116,27 @@ class Button(discord.ui.View):
     async def button_callback2(self, interaction: discord.Interaction, button: discord.ui.Button):
         button.label = "Button"
         for item in self.children:
-            button.style = discord.ButtonStyle.gray
             item.disabled = True
         await interaction.response.edit_message(view=self)
-        await interaction.response.send_message("hi")
+        await interaction.followup.send("hi")
 
     @discord.ui.button(label="Button", style=discord.ButtonStyle.success, row=0)
     async def button_callback3(self, interaction: discord.Interaction, button: discord.ui.Button):
         button.label = "Button"
         for item in self.children:
-            button.style = discord.ButtonStyle.gray
             item.disabled = True
         await interaction.response.edit_message(view=self)
-        await interaction.response.send_message("hi")
+        await interaction.followup.send("hi")
 
     @discord.ui.button(label="Button", style=discord.ButtonStyle.danger, row=0)
     async def button_callback4(self, interaction: discord.Interaction, button: discord.ui.Button):
         button.label = "Button"
         for item in self.children:
-            button.style = discord.ButtonStyle.gray
             item.disabled = True
         await interaction.response.edit_message(view=self)
-        await interaction.response.send_message("hi")
+        await interaction.followup.send("hi")
 ```
 
 Now every button is disabled. 
 
-<img src="/Images/4dis.png">
+<img src="/Images/dis4.png">
